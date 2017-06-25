@@ -1,42 +1,8 @@
 body{
-    background-image: url("../img/retina_wood.png");
 }
 
-.container-fluid{
+#header{
     margin-top: 25px;
-    margin-bottom:25px;
-    background-color: none;
-    width:80%;
-}
-
-
-.effect8
-{
-    background-color: white;
-    position:relative;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-
-
-.effect8:before, .effect8:after
-{
-	content:"";
-    position:absolute; 
-    z-index:-1;
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
-    top:10px;
-    bottom:10px;
-    left:0;
-    right:0;
-    border-radius:100px / 10px;
-} 
-
-
-.effect8:after
-{
-    right:10px; 
-    left:auto; 
-    transform:skew(8deg) rotate(3deg);
 }
 
 
@@ -57,71 +23,480 @@ a{
     font-family: 'Anaheim', sans-serif;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 
 
 #text-logo h1 {
     
     font-family:'Cutive Mono', monospace;
     font-size: 45pt;
+    letter-spacing: -10px;
+    margin: 25% 0 25% 0;
 }
 
-#nav ul{
-
+#nav ul li a{
     
+    font-family: 'Anaheim', sans-serif;
+    font-size: 15pt;
+    margin-left:95px;
 }
+
+#nav2 ul li a{
+    
+    font-family: 'Anaheim', sans-serif;
+    font-size: 15pt;
+    margin-left:80px;
+}
+
+.clear {
+    clear: both;
+}
+
+.selected{
+    color: #337ab7;
+}
+
 
 .post{
     margin-bottom:25px; 
-    width:81%;
-
-}
-
-#sideMenu{
-    float:right;
-    margin: 0 auto;
-    padding: 0 40px;
-    height:900px;
-}
-
-#sideMenu ul{
-    display:block;
-    list-style-type: square;
-}
-
-#sideMenu ul li a{
-    font-size: 16pt;
-
-}
-
-#sideMenu #formEscrever input[type=text]{
-    
-    margin: 5px 0 ;
-
-}
-
-#sideMenu #formEscrever input[type=submit]{
-    width: 155px;
-    margin: 5px 0;
 
 }
 
 
- .post {
 
-    padding: 0 40px;
- }
-
- .postTittle{
-    margin-bottom: 0;
-    text-align: right;
+.postTittle{
+    text-align: center;
     font-weight: bold;
- }
 
- .postSubtittle {
-    text-align: right;
+    text-transform: uppercase;
+}
+
+.postSubtittle {
+    text-align: left;
     font-style: italic;
-    margin-top: 0;
     font-size: 20pt;
- }
+    margin-top: 50px;
+}
+
+.letraAutor{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin:7% auto;
+    border-radius: 100%;
+    background-color:  #337ab7;
+}
 
 
+.letra {
+    font-family: 'Anaheim', sans-serif;
+    color:#fff;
+    
+    border: none;
+
+    font-size:50pt; 
+    position:relative;
+    top:3%; 
+}
+
+
+.letra2{
+    
+    background-color:  red;
+}
+
+.letra3{
+    
+    background-color:  orange;
+}
+
+.conteudoPost{
+    margin: 50px auto;
+    text-align: justify;
+}
+
+.assinatura{
+    width:30%;
+    margin: 0 auto;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.modalTittle{
+    font-family: 'Anaheim', sans-serif;
+    margin-top:0;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    left: 95%;
+    top:10%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.erro{
+    width: 800px;
+    height: 800px;
+    margin: 15% auto;
+}
+
+
+#formAreaEscritor {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#formAreaEscritor input[type=text],
+#formAreaEscritor input[type=password] {
+    width: 200px;
+    margin: 5px 15%;
+    padding: 5px;
+}
+
+#formAreaEscritor input[type=submit]{
+    width: 200px;
+    margin: 5px 15%;
+    padding: 5px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+}
+
+
+#formAreaEscritor input[type=submit]:hover{
+    appearance:button;
+    -moz-appearance:button; /* Firefox */
+    -webkit-appearance:button; /* Safari and Chrome */ 
+
+    padding:10px;
+    
+    width:225px;
+
+    margin: 5px 11%;
+}
+
+.labels{
+    text-align: right;
+}
+
+.information{
+    text-align: left;
+}
+
+
+#contasTittle{
+    max-width:280px;
+    margin: 10% auto 0;
+    background-color: #337ab7;
+    border-radius: 3%;
+    color: #fff;
+    text-align: center;
+
+}
+
+#criarContaTittle {
+    max-width:450px;
+    margin: 0 auto;
+    background-color: red;
+    border-radius: 3%;
+    color: #fff;
+    text-align: center;
+}
+
+#administracaoContas{
+    min-height: 200px;
+    padding:5% 0;
+}
+
+
+
+#criarContaForm {
+
+    padding:40px 0;
+    width:700px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+#criarContaForm input[type=text]{
+    width: 200px;
+    padding: 5px;
+    text-align:center;
+}
+
+#criarContaForm input[type=button]{
+    width: 200px;
+    margin: 15px 0;
+    padding: 5px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+}
+
+
+#criarContaForm input[type=button]:hover{
+    appearance:button;
+    -moz-appearance:button; /* Firefox */
+    -webkit-appearance:button; /* Safari and Chrome */ 
+
+    padding:10px;
+    
+    width:225px;
+
+    margin: 10px 11%;
+}
+
+#sobre_mimForm {
+    margin: 0 auto 5% auto;
+    display:none;
+}
+
+#sobre_mimForm input[type=text] {
+    width: 30%;
+    padding: 5px;
+}
+
+#sobre_mimForm input[type=submit],
+#sobre_mimForm input[type=button]{
+    width: 200px;
+    margin: 50px 5%;
+    padding: 5px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+}
+
+
+#sobre_mimForm input[type=submit]:hover,
+#sobre_mimForm input[type=button]:hover{
+    appearance:button;
+    -moz-appearance:button; /* Firefox */
+    -webkit-appearance:button; /* Safari and Chrome */ 
+
+    padding:10px;
+    
+    /* width:225px; */
+
+    /* margin: 5px 11%; */
+}
+
+#alterarInformacoesDiv {
+    margin-bottom: 200px;
+}
+
+#alterarInformacoesBt {
+    width: 200px;
+    margin: 5px 41%;
+    padding: 5px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+}
+
+
+
+#alterarInformacoesBt:hover {
+    appearance:button;
+    -moz-appearance:button; /* Firefox */
+    -webkit-appearance:button; /* Safari and Chrome */ 
+
+    padding:10px;
+    
+    width:225px;
+
+    margin: 5px 40%;
+
+}
+
+#letraDiv { 
+    border: 1px solid buttonface;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+    overflow: hidden;
+
+}
+
+
+
+.letrasSquare {
+    font-family: 'Anaheim', sans-serif;
+    background-color: buttonface;
+    margin: 3px;
+    width: 43px;
+    height: 43px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    display:none;
+}
+
+.letraSelected {
+    border: 1px solid #000;
+    display:block;
+}
+
+.letrasSquare:hover {
+    background-color: #fff;
+}
+
+
+
+#letraDiv:hover {
+    width: 99%; 
+    height: 100px;
+    
+}
+
+#letraDiv:hover .letrasSquare{
+    display: inline-block;
+}
+
+#corDiv { 
+    border: 1px solid buttonface;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+    overflow: hidden;
+
+}
+
+.selecionarCor{
+    margin: 2px;
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    cursor: pointer;
+    display:none;
+}
+
+.corSelected {
+    border:1px solid #000;
+    display: block;
+}
+
+.corHover:hover{
+    width: 39px;
+    height: 39px;
+    margin: 4px;
+}
+
+#corDiv:hover {
+    width:97%;
+    height:105px;
+}
+
+#corDiv:hover .selecionarCor{
+    display: inline-block;
+}
+
+#formEscrever{
+    margin: 0 auto 5% auto;
+}
+
+#formEscrever input[type=text] {
+    width: 30%;
+    padding: 5px;
+}
+
+#formEscrever input[type=submit]{
+    width: 200px;
+    margin: 50px 5%;
+    padding: 5px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+}
+
+
+#formEscrever input[type=submit]:hover{
+    appearance:button;
+    -moz-appearance:button; /* Firefox */
+    -webkit-appearance:button; /* Safari and Chrome */ 
+
+    padding:10px;
+    
+    /* width:225px; */
+
+    /* margin: 5px 11%; */
+}

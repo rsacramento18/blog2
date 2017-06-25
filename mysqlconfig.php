@@ -1,8 +1,13 @@
 <?php
-/***** EDIT BELOW LINES *****/
-$DB_Server = "localhost"; // MySQL Server
-$DB_Username = "root"; // MySQL Username
-$DB_Password = "Agaporni1991"; // MySQL Password
-$DB_DBName = "blog"; // MySQL Database Name
+ini_set('default_charset', 'UTF-8');
+
+define('BD_USER', 'root');
+define('BD_PASSWORD', 'Agaporni1991');
+define('BD_HOST', 'localhost');
+define("BD_NAME", 'blog');
+
+$dbc = @mysqli_connect(BD_HOST, BD_USER, BD_PASSWORD, BD_NAME)
+or die('Could not connect to mysql ' . mysqli_connect_error());
+$dbc->set_charset("utf8");
 
 ?>
